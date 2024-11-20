@@ -7,11 +7,13 @@ function createHeart() {
         </svg>
     `;
 
-    const size = Math.random() * 20 + 10;
+    const size = Math.random() * 20 + 15;
     heart.style.width = `${size}px`;
     heart.style.height = `${size}px`;
 
     heart.style.left = `${Math.random() * 100}%`;
+
+    heart.style.zIndex = -1;
 
     const fallDuration = Math.random() * 3 + 2;
     heart.style.transition = `transform ${fallDuration}s linear`;

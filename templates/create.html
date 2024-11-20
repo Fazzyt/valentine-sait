@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>День святого Валентина</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/icons.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/create.css') }}">
+</head>
+
+<body>
+    <div class="falling-hearts" id="hearts"></div>
+
+    <div class="parallax">
+        <div class="overlay"></div>
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row w-100 justify-content-center">
+                <div class="col-md-6">
+                    <div class="valentine-card">
+                        <h2 class="text-center mb-4">Создание Валентинки</h2>
+                        <form method="POST">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Телеграм тег получателя</label>
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="name" 
+                                    name="name" 
+                                    placeholder="Введите тег кому отправить." 
+                                    required
+                                >
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Сообщение</label>
+                                <textarea 
+                                    class="form-control" 
+                                    id="message" 
+                                    name="message" 
+                                    rows="4" 
+                                    placeholder="Напишите ваше послание" 
+                                    required
+                                ></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn heart-button">
+                                    Отправить
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
