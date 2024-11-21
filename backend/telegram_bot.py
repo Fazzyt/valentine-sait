@@ -1,5 +1,4 @@
 import logging
-import os
 
 from pyrogram import Client, filters
 from .config import config
