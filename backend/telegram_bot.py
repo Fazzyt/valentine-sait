@@ -20,13 +20,14 @@ class ValentineBot:
             logging.error(f"Ошибка подключения: {e}")
             return False
 
-    async def send_valentine(self, recipient, message):
+    async def send_valentine(self, recipient, uuid):
         try:
-            # Форматируем текст валентинки
-            valentine_text = f"❤️ Вам Валентинка.\n\nСообщение: {message} \n\nСделать валентинку можно по ссылке: {config.URL_SITE}"
             
             # Асинхронная отправка сообщения
-            await self.client.send_message(recipient, valentine_text)
+            await self.client.send_message(
+                recipient,
+                f"❤️ <b>Вам Валентинка.</b>\n\n<i>Посмотреть:</i> <a href='{config.URL_SITE}/valentine/{uuid}'>Ссылка</a>")
+            
             return True
         except Exception as e:
             logging.error(f"Ошибка отправки валентинки: {e}")

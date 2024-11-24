@@ -12,10 +12,12 @@ class Config:
     API_HASH: str
     PHONE_NUMBER: str
 
+    URL_SITE: str
+    USE_BOT: bool
+
     HOST: str
     PORT: int
-    URL_SITE: str
-    
+
     DEBUG: bool = False
     
     def __init__(self, config_file_path="config.json") -> None:
